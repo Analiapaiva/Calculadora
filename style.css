@@ -6,23 +6,12 @@ body{
     color: #3E363F;
 }
 
-#contenedor{
-    width: 900px;
-    height: 500px;
-    text-align: center;
-    /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
-    position: absolute;
-    inset: 0;
-    margin: auto;
-}
-
 #calculadora{
     background: white;
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
     float:left;
-    color: #f6f5f7;
 }
 
 #detalle{
@@ -31,6 +20,15 @@ body{
     width: 50%;
     height: 100%;
     float: left;
+    color: #f6f5f7;
+}
+.contenido{
+    /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    padding: 40px;
 }
     #contenedor{
         width: 900px;
@@ -45,13 +43,27 @@ body{
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
           0 10px 10px rgba(0,0,0,0.22);
       }
-      
-input {
-	width: 70%;
-    padding: 12px 15px;
-    border: none;
-    background-color: #eee;
-}
+      input{
+            widht: 70%;
+        padding: none;
+        background-color: #eee;
+      }
+      button {
+        font-size: 15px;
+          font-weight: bold;
+          padding: 12px 45px;
+          border-radius: 30px;
+          background-color: #FF416C;
+          border: 1px solid #FF416C;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: transform 20ms ease-in;
+      }
+      button:active {
+        transform: scale(0.95);
+    }
+    
     #error{
         color: red;
         font-weight: bold;
@@ -65,4 +77,4 @@ input {
         margin-bottom: 5px;
         display: none;
     }
-        
+ 
